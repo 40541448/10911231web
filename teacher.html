@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
+
+  <title>憨及仆隬幼稚園</title>
+</head>
+
+<style>
+  * {
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
+  .card {
+    height: 100%;
+  }
+
+
+  /* button-hand */
+  button {
+    background: transparent;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font: 24px "Margarine", sans-serif;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 2px;
+  }
+
+  .button-hand:before,
+  .button-hand:after,
+  .button-hand *:before,
+  .button-hand *:after {
+    content: "";
+    position: absolute;
+  }
+
+  .button-hand button:before {
+    content: "👇";
+    font-size: 60px;
+    transform: scaleX(-1);
+    right: 0px;
+    top: -68px;
+    animation: up-down 1s infinite;
+
+  }
+
+  .button-hand button .hands:before,
+  .button-hand button .hands:after {
+    content: "👇";
+    font-size: 40px;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+  }
+
+  .button-hand button .hands:before {
+    transform: rotate(-60deg);
+    left: -45px;
+    top: -10px;
+  }
+
+  .button-hand button .hands:after {
+    transform: rotate(170deg);
+    right: 30px;
+    top: 50px;
+  }
+
+  .button-hand button:hover .hands:before {
+    opacity: 1;
+    left: -35px;
+  }
+
+  .button-hand button:hover .hands:after {
+    opacity: 1;
+    top: 40px;
+  }
+
+  .button-hand button:focus {
+    outline: 0px;
+  }
+
+  @keyframes up-down {
+    50% {
+      margin-top: -20px;
+    }
+  }
+
+  /* button-hand */
+
+  .img-box {
+    overflow: hidden;
+  }
+
+  .img-box img {
+    transition: 1.5s;
+  }
+
+  .img-box:hover img {
+    transform: scale(1.75, 1.75);
+
+  }
+
+  .icon-b:hover {
+    transform: scale(1.25, 1.25);
+  }
+
+
+  /* /////////////////////////////////////////////////////////////////////*/
+
+  /* teacher-button */
+
+  .share-button {
+    width: 100%;
+    height: auto;
+    background: #dfe6e9;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .3s linear;
+  }
+
+  .share-button:hover {
+    transform: scale(1.1);
+  }
+
+  .share-button span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: paleturquoise;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    z-index: 999;
+    transition: .6s linear;
+    border-radius: 40px;
+  }
+
+  .share-button:hover span {
+    transform: translateX(-100%);
+    transition-delay: .3s;
+  }
+
+  .share-button a {
+    font-size: 25px;
+    margin: auto auto;
+    color: #2d3436;
+    text-align: center;
+    transition: .3s linear;
+  }
+
+  /* teacher-button */
+</style>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark text-center" style="background-color: #acd6ff">
+    <a class="navbar-brand" href="#"><img src="./image/icon1.png" alt="" style="height: 45px" /></a>
+    <a class="navbar-brand" href="#"><img src="./image/icon2.png" alt="" style="height: 45px" /></a>
+    <a class="navbar-brand" href="#"><img src="./image/icon3.png" alt="" style="height: 45px" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item font-weight-bolder">
+          <a class="nav-link" href="index.html">園區簡介 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item font-weight-bolder active">
+          <a class="nav-link" href="teacher.html">師資介紹</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- navbar -->
+
+  <!-- content 1 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mt-4 text-center">
+        <img class="icon-b" src="./image/teacher1.png" style="height: 40px; margin:0px 10px;" alt="">
+        <h2>是園長大大</h2>
+      </div>
+      <div class="row nogutters mt-4">
+        <div class="col-md-4">
+          <div class="img-box">
+            <img src="./image/teacher0.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h3 class="card-title">Dadio Sai</h3>
+            <h5>學經歷：</h5>
+            <p>(1996-1997) Massachusetts Institute of Technology 管理學博士班 畢業</p>
+            <p>(1997-1998) Massachusetts Institute of Technology 文學博士班 畢業</p>
+            <p>(1998-1999) Massachusetts Institute of Technology 工程學博士班 畢業</p>
+            <p>(1999-2000) Stanford University 教育學博士班 畢業</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- content 1 -->
+
+  <!-- content 2 -->
+  <div class="container text-center">
+    <img class="icon-b" src="./image/teacher2.png" style="height: 40px;" alt="">
+    <img class="icon-b" src="./image/teacher2.png" style="height: 40px;" alt="">
+    <img class="icon-b" src="./image/teacher2.png" style="height: 40px;" alt="">
+    <h3 class="mt-2">堅強的師資陣容</h3>
+    <div class="row justify-content-md-center" style="height: auto;">
+      <div class="col-md-3 mt-4">
+        <div class="card" data-aos="flip-left" style="width: 100%;">
+          <img src="./image/teacher1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">GIDEON WALLS</h5>
+            <p class="card-text">
+              (2004-2005) Stanford University 教育學博士班 畢業
+            </p>
+            <div class="share-button">
+              <span>聯絡我</span>
+              <a href="https://zh-tw.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://line.me/zh-hant/"><i class="fab fa-line"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/?lang=zh-tw"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-4">
+        <div class="card" data-aos="flip-left" style="width: 100%;">
+          <img src="./image/teacher2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">MADELINE MAY</h5>
+            <p class="card-text">
+            <p>(2009-2010) Stanford University 教育學博士班 畢業</p>
+            </p>
+            <div class="share-button">
+              <span>聯絡我</span>
+              <a href="https://zh-tw.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://line.me/zh-hant/"><i class="fab fa-line"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/?lang=zh-tw"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-4">
+        <div class="card" data-aos="flip-left" style="width: 100%;">
+          <img src="./image/teacher3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">RUDY FRANKLIN</h5>
+            <p class="card-text">
+            <p>(1997-1998) Stanford University 教育學博士班 畢業</p>
+            </p>
+            <div class="share-button">
+              <span>聯絡我</span>
+              <a href="https://zh-tw.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://line.me/zh-hant/"><i class="fab fa-line"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/?lang=zh-tw"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-4">
+        <div class="card" data-aos="flip-left" style="width: 100%;">
+          <img src="./image/teacher4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">ANDY SIMS</h5>
+            <p class="card-text">
+            <p>(1999-2000) Stanford University 教育學博士班 畢業</p>
+            </p>
+            <div class="share-button">
+              <span>聯絡我</span>
+              <a href="https://zh-tw.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://line.me/zh-hant/"><i class="fab fa-line"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/?lang=zh-tw"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-4">
+        <div class="card" data-aos="flip-left" style="width: 100%;">
+          <img src="./image/teacher5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">NATALIE CASEY</h5>
+            <p class="card-text">(2008-2009) Massachusetts Institute of Technology 自然科學博士班 畢業</p>
+            <div class="share-button">
+              <span>聯絡我</span>
+              <a href="https://zh-tw.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://line.me/zh-hant/"><i class="fab fa-line"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/?lang=zh-tw"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-4">
+        <div class="card" data-aos="flip-left" style="width: 100%;">
+          <img src="./image/teacher6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">ROCKY HOGAN</h5>
+            <p class="card-text">(2007-2008) Massachusetts Institute of Technology 建築學博士班 畢業</p>
+            <div class="share-button">
+              <span>聯絡我</span>
+              <a href="https://zh-tw.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://line.me/zh-hant/"><i class="fab fa-line"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/?lang=zh-tw"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-4">
+        <div class="card" data-aos="flip-left" style="width: 100%;">
+          <img src="./image/teacher7.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">HEIDI INGRAM</h5>
+            <p class="card-text">(2008-2009) Massachusetts Institute of Technology 工程學博士班 畢業</p>
+            <div class="share-button">
+              <span>聯絡我</span>
+              <a href="https://zh-tw.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://line.me/zh-hant/"><i class="fab fa-line"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/?lang=zh-tw"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-4">
+        <div class="card" data-aos="flip-left" style="width: 100%;">
+          <img src="./image/teacher8.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">DANNY SMALL</h5>
+            <p class="card-text">(2006-2007) Massachusetts Institute of Technology 管理學博士班 畢業</p>
+            <div class="share-button">
+              <span>聯絡我</span>
+              <a href="https://zh-tw.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://line.me/zh-hant/"><i class="fab fa-line"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/?lang=zh-tw"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- content 2 -->
+
+  <!-- content 3 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron mt-4" style="background-color: #E6CAFF;">
+          <h1 class="display-4">心動了嗎？？</h1>
+          <p class="lead">看完如此堅強的師資陣容，是不是感到心癢難耐了呢？</p>
+          <hr class="my-4">
+          <p>那就快點報名預約試讀，讓我們幫助您和孩子一起上天堂！！</p>
+          <div class="item button-hand text-right" data-toggle="modal" data-target="#exampleModalCenter">
+            <button>點我報名
+              <div class="hands"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- content 3 -->
+
+  <!-- 預約試讀 -->
+  <div class="modal fade p-0" id="exampleModalCenter" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">
+            預約試讀報名系統
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row text-center">
+              <div class="col-md-12 text-danger">
+                <h2>注意事項</h2>
+                <h6>(請詳閱以下說明)</h6>
+                <img class="w-100" src="./image/model.jpg" alt="" />
+              </div>
+            </div>
+            <ul class="mt-4 mb-4 text-danger">
+              <li>
+                報名後事同為同意所有注意事項，請務必詳細閱讀。
+              </li>
+              <li>
+                請確實填寫以下資料，以利人員後續作業。
+              </li>
+              <li>
+                確定報名後，系統會寄送簡訊至報名人手機，請參照簡訊內步驟操作，完成報名驗證。
+              </li>
+              <li>
+                預約試讀每天僅開放十個名額，若系統顯示預約已滿敬請另擇他日。
+              </li>
+              <li>
+                預約試讀時間為每周一至日下午14:00-15:00。
+              </li>
+              <li>
+                若於預約試讀當天無法出席者，請於三個月前親至幼稚園取消報名。
+              </li>
+              <li>
+                若於預約試讀當天無故缺席者，後續將不開放預約試讀及就讀本幼稚園。
+              </li>
+            </ul>
+            <form class="needs-validation was-validated">
+              <div class="row">
+                <div class="col-md-12 mt-2">
+                  <div class="form-group">
+                    <label for="">兒童姓名</label>
+                    <input class="form-control" type="text" required placeholder="請輸入兒童姓名..." />
+                  </div>
+                  <div class="form-group">
+                    <label for="">家長姓名</label>
+                    <input class="form-control" type="text" required placeholder="請輸入家長姓名..." />
+                  </div>
+                  <div class="form-group">
+                    <label for="">家長手機</label>
+                    <input class="form-control" type="text" required placeholder="請輸入家長手機..." />
+                  </div>
+                  <div class="form-group">
+                    <label for="">戶籍地址</label>
+                    <input class="form-control" type="text" required placeholder="請輸入身份證上戶籍地址..." />
+                  </div>
+                  <div class="form-group date" data-target-input="nearest">
+                    <label for="">預約試讀日期</label>
+                    <input type="date" class="form-control" type="text" required />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btn btn-success">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 預約試讀 -->
+
+  <!-- footer -->
+  <footer class="container-fluid" style="background-color: #acd6ff">
+    <div class="row justify-content-md-center">
+      <div class="col-md-8 mt-3">
+        <p class="float-right"><a href="#">回頂端</a></p>
+        <p>Copyright ©2021 憨及仆隬幼稚園版權所有</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+    });
+  </script>
+</body>
+
+</html>
