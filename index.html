@@ -16,114 +16,23 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+
+    <!-- import google fonts  -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- inport index.css -->
+    <link rel="stylesheet" href="./Css/index.css" />
+
+    <!--import header swiper css -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
   </head>
-
-  <style>
-    /* skin3 button */
-    .skin3 button {
-      border: 3px solid #b0b1fc;
-      color: #acadff;
-      background-color: #8486fc;
-    }
-
-    .skin3 button:hover {
-      border-color: #b5fcfc;
-      color: #00ffff;
-      background-color: #85ffff;
-    }
-
-    .skin3 button:focus {
-      border-color: #fc80f6;
-      color: #ff2ff5;
-      background-color: #ff5cf7;
-      outline: 0;
-      border-radius: 12px;
-    }
-
-    .skin3 button:focus:first-of-type {
-      border-radius: 30px 12px 12px 30px;
-    }
-
-    .skin3 button:focus:last-of-type {
-      border-radius: 12px 30px 30px 12px;
-    }
-
-    button::-moz-focus-inner {
-      border: 0;
-    }
-
-    button {
-      outline: 0;
-    }
-
-    .multi-button {
-      margin: 40px auto;
-      font-size: 0;
-    }
-
-    button {
-      /* font-weight: 800; */
-      background: transparent;
-      min-width: 100px;
-      text-transform: uppercase;
-      border-radius: 8px;
-      font-size: 15px;
-      display: inline-block;
-      padding: 10px 16px;
-      margin: 0 3px 0 0;
-      cursor: pointer;
-      transition-duration: 0.1s;
-      transition-timing-function: ease-in-out;
-    }
-
-    /* 上一頁按鈕原角 */
-    button:first-of-type {
-      border-radius: 20px 8px 8px 20px;
-    }
-
-    /* 下一頁按鈕原角 */
-    button:last-of-type {
-      border-radius: 8px 20px 20px 8px;
-    }
-
-    /* skin3 button */
-
-    * {
-      font-size: 18px;
-      font-family: "Noto Sans TC", sans-serif;
-    }
-
-    img {
-      max-width: 100%;
-      max-height: auto;
-    }
-
-    .content1-box:hover {
-      transform: scale(1.25, 1.25);
-    }
-
-    #con2 {
-      margin: 50px;
-      text-align: center;
-    }
-
-    #con3 {
-      margin: 50px auto;
-    }
-
-    footer {
-      margin-top: 50px;
-    }
-  </style>
 
   <body>
     <!-- navbar -->
@@ -131,13 +40,13 @@
       class="navbar navbar-expand-lg navbar-dark text-center"
       style="background-color: #acd6ff"
     >
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand" href="index.html"
         ><img src="./image/icon1.png" alt="" style="height: 45px"
       /></a>
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand" href="index.html"
         ><img src="./image/icon2.png" alt="" style="height: 45px"
       /></a>
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand" href="index.html"
         ><img src="./image/icon3.png" alt="" style="height: 45px"
       /></a>
       <button
@@ -628,7 +537,7 @@
                   <div class="card-body text-success">
                     <h5 class="card-title">夏威夷火山探險</h5>
                     <p class="card-text">
-                      體驗掉入岩漿的後果，讓小孩不敢再隨意靠近危險地帶。
+                      體驗掉入岩漿的後果，讓孩子從幼兒時期培養危險意識。
                     </p>
                   </div>
                   <a
@@ -642,9 +551,9 @@
                     異界體驗
                   </div>
                   <div class="card-body text-danger">
-                    <h5 class="card-title">Warning card title</h5>
+                    <h5 class="card-title">平行世界體驗</h5>
                     <p class="card-text">
-                      深入蟲洞探索平行宇宙，讓孩子從學齡前訂好自己目標。
+                      深入蟲洞探索平行宇宙，讓孩子從學齡前訂定未來目標。
                     </p>
                   </div>
                   <a
@@ -767,11 +676,9 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-dismiss="modal">
-                Close
+                取消
               </button>
-              <button type="button" class="btn btn-success">
-                Save changes
-              </button>
+              <button type="button" class="btn btn-success">送出</button>
             </div>
           </div>
         </div>
@@ -800,18 +707,21 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <!-- swiper javescript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".swiper-container", {
+        // 設定翻轉模式
         effect: "flip",
-        grabCursor: true,
+        // 設定上下頁按鈕
         navigation: {
           nextEl: ".my-next",
           prevEl: ".my-prev",
         },
       });
 
+      // 當點擊.my-home按鈕，將頁面指定到slide(0, 0)
       document.querySelectorAll(".my-home").forEach((el) => {
         el.addEventListener("click", (e) => {
           e.preventDefault();

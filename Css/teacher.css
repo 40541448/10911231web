@@ -1,0 +1,187 @@
+* {
+  font-size: 18px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.card {
+  height: 100%;
+}
+
+/* button-hand Start*/
+button {
+  background: transparent;
+  /* 字型顏色 */
+  color: #fff;
+  /* 框線粗細樣式及顏色 */
+  border: 3px solid #fff;
+  /* 設定按鈕外框原角 */
+  border-radius: 50px;
+  /* 設定按鈕內距 */
+  padding: 0.8rem 2rem;
+  /* 設定手指定位 */
+  position: relative;
+}
+
+.button-hand:before,
+.button-hand:after,
+.button-hand *:before,
+.button-hand *:after {
+  content: "";
+  position: absolute;
+}
+
+/* 設定未hover時手指狀態 */
+.button-hand button:before {
+  content: "👇";
+  /* 設定手指大小 */
+  font-size: 60px;
+  /* 轉換手指方向 */
+  transform: scaleX(-1);
+  /* 設定手指右邊距 */
+  right: 10px;
+  /* 設定手指距離定位點之上邊距或下邊距 */
+  top: -68px;
+  /* 設定手指上下浮動 */
+  animation: up-down 1s infinite;
+}
+
+.button-hand button .hands:before,
+.button-hand button .hands:after {
+  content: "👇";
+  /* 設定hover後出現手指大小 */
+  font-size: 40px;
+  /* 未hover時手指透明與否 */
+  opacity: 0;
+  /* 設定hover後手指進入時間及狀態 */
+  transition: 0.4s ease-in-out;
+}
+
+/* 設定左邊手指狀態 */
+.button-hand button .hands:before {
+  /* 手指旋轉角度 */
+  transform: rotate(-60deg);
+  /* 距離定位點左邊距及上邊距 */
+  left: -45px;
+  top: -10px;
+}
+
+/* 設定下手指狀態 */
+.button-hand button .hands:after {
+  /* 手指旋轉角度 */
+  transform: rotate(170deg);
+  /* 設定下手指又邊距及上邊距 */
+  right: 30px;
+  top: 50px;
+}
+
+.button-hand button:hover .hands:before {
+  /* 設定左手指hover後是否透明 */
+  opacity: 1;
+  /* 設定左手指hover後左邊距 */
+  left: -35px;
+}
+
+.button-hand button:hover .hands:after {
+  /* 設定下手指hover後是否透明 */
+  opacity: 1;
+  /* 設定下手指hover後上邊距 */
+  top: 40px;
+}
+
+/* 設定按下按鈕後框線是否隱藏 */
+.button-hand button:focus {
+  outline: 0;
+}
+
+/* 設定上方animation動畫 */
+@keyframes up-down {
+  50% {
+    margin-top: -20px;
+  }
+}
+
+/* button-hand End*/
+
+.img-box {
+  overflow: hidden;
+}
+
+/* 設定放大時間間隔 */
+.img-box img {
+  transition: 1.5s;
+}
+
+/* hover後框線粗細樣式及顏色 */
+.img-box:hover {
+  border: 6px solid rgb(255, 87, 137);
+}
+
+/* hover後圖片放大倍數 */
+.img-box:hover img {
+  transform: scale(1.75, 1.75);
+}
+
+/* icon放大倍數 */
+.icon-b:hover {
+  transform: scale(1.25, 1.25);
+}
+
+/* teacher-hover時邊框粗細樣式及顏色 */
+.teacher-hover:hover {
+  border: 3px solid rgb(0, 217, 255);
+}
+
+/* teacher-button Start*/
+
+.share-button {
+  width: 100%;
+  height: auto;
+  background: #dfe6e9;
+  border-radius: 40px;
+  display: flex;
+  /* 設定上層span置中 */
+  justify-content: center;
+  /* 設定內層左右內距 */
+  padding: 0 50px;
+  /* 設定上層span位移後隱藏溢出圖示 */
+  overflow: hidden;
+  position: relative;
+}
+
+/* 設定hover後sharebutton放大倍數 */
+.share-button:hover {
+  transform: scale(1.1);
+}
+
+.share-button span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: paleturquoise;
+  /* 文字顏色 */
+  color: white;
+  /* 設定文字高度 */
+  line-height: 36px;
+  /* 設定span位移速度 */
+  transition: 0.6s linear;
+  /* span原角 */
+  border-radius: 40px;
+}
+
+.share-button:hover span {
+  /* hover後span向後退 */
+  transform: translateX(-100%);
+  /* 設定span展開延遲秒數 */
+  transition-delay: 0.3s;
+}
+
+.share-button a {
+  /* a連結icon大小 */
+  font-size: 25px;
+  /* a內邊距 */
+  margin: auto auto;
+  color: #2d3436;
+  text-align: center;
+}
+
+/* teacher-button End*/
